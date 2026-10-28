@@ -10,7 +10,7 @@
 **① VS Code의 Claude 패널(아무 폴더나 괜찮아요)에 붙여 넣기**
 
 ```
-https://github.com/gfmmmm/template-reels-edit 를 홈 폴더 아래 reels-edit 폴더로 내려받고, 다음에 제가 할 일을 알려 주세요. (README의 "Claude Code에게" 절대로 해 주세요)
+https://github.com/gfmmmm/template-reels-edit 의 README에서 "Claude Code에게" 절을 먼저 읽고, 그대로 홈 폴더 아래 reels-edit 폴더로 내려받아 주세요. 다 되면 제가 할 일만 알려 주세요.
 ```
 
 **② 안내대로 VS Code에서 `reels-edit` 폴더를 연 다음, 새 대화에서**
@@ -88,7 +88,7 @@ reels-edit/
 ## Claude Code에게 — 사용자가 이 링크를 주며 내려받아 달라고 했다면
 
 1. 받을 곳: 사용자가 말한 곳, 없으면 홈 폴더 아래 `reels-edit`. 이미 있으면 덮지 말고 먼저 묻는다(이미 쓰던 폴더면 "업데이트 받아줘"가 맞다).
-2. 내려받기: `curl -L -o /tmp/reels-edit.zip https://github.com/gfmmmm/template-reels-edit/archive/refs/heads/main.zip`, 압축을 풀고(`unzip`이 없으면 `python3 -m zipfile -e`) 안의 `template-reels-edit-main` 폴더를 받을 곳으로 옮긴다. 윈도우는 Git Bash 기준으로 같은 명령을 쓴다.
+2. 내려받기: 빈 임시 폴더를 만들고 그 안에서 `curl -fsSL https://github.com/gfmmmm/template-reels-edit/archive/refs/heads/main.tar.gz | tar -xz` → 생긴 `template-reels-edit-main` 폴더를 받을 곳으로 옮긴다. 윈도우는 Git Bash 에서 같은 명령을 쓴다. **zip 으로 받아 `unzip`으로 풀지 않는다** — 맥 기본 `unzip`은 한글 파일 이름(`릴스편집`·`릴스검수`)을 깨뜨려 설치가 안 된다. git 이 있으면 `git clone https://github.com/gfmmmm/template-reels-edit <받을 곳>`도 된다(업데이트가 `git pull`로 돈다). 받은 뒤 `.claude/skills/릴스편집/SKILL.md`가 있는지 확인한다.
 3. 사용자에게 딱 두 줄로 안내한다 — "폴더가 생겼어요. VS Code 메뉴 파일 → 폴더 열기로 그 폴더를 연 다음, Claude 패널에서 새 대화를 열고 '구축 가이드대로 진행해줘'라고 말해 주세요." (이 폴더의 규칙과 스킬은 그 폴더를 열어야 읽힌다. 터미널을 쓰는 사람이면 그 폴더에서 `claude`를 실행해도 같다.)
 4. 그 폴더에서 열린 Claude Code는 `SETUP.md`를 읽고 진행한다.
 

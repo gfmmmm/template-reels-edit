@@ -26,8 +26,9 @@ main() {
   else
     TMP="$(mktemp -d)"
     echo "새 판 내려받는 중…"
-    curl -fsSL -o "$TMP/new.zip" "https://github.com/$REPO/archive/refs/heads/$BRANCH.zip" || { echo "❌ 내려받기 실패 — 인터넷 연결을 확인해 주세요"; exit 1; }
-    ( cd "$TMP" && { unzip -q new.zip 2>/dev/null || python3 -m zipfile -e new.zip . 2>/dev/null || python -m zipfile -e new.zip .; } )
+    # tar.gz 로 받는다 — 맥 기본 unzip 은 깃허브 zip 의 한글 파일 이름(릴스편집·릴스검수)을 깨뜨린다
+    curl -fsSL -o "$TMP/new.tar.gz" "https://github.com/$REPO/archive/refs/heads/$BRANCH.tar.gz" || { echo "❌ 내려받기 실패 — 인터넷 연결을 확인해 주세요"; exit 1; }
+    tar -xzf "$TMP/new.tar.gz" -C "$TMP" && rm -f "$TMP/new.tar.gz"
     NEW="$(find "$TMP" -mindepth 1 -maxdepth 1 -type d | head -1)"
     [ -f "$NEW/.claude/skills/릴스편집/SKILL.md" ] || { echo "❌ 받은 파일이 이상해요(도구 본체가 없음)"; exit 1; }
     NEWV="$(cat "$NEW/VERSION" 2>/dev/null || echo '?')"
