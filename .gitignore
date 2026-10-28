@@ -1,0 +1,21 @@
+# 내가 키운 것 — 이 컴퓨터에만 두고 깃허브로 올리지 않는다
+.claude/skills/릴스편집/환경.md
+.claude/skills/릴스편집/편집메뉴얼.md
+.claude/skills/릴스편집/presets/
+.claude/skills/릴스편집/계정자료/
+.claude/skills/릴스편집/remotion/src/brand.ts
+.claude/skills/릴스편집/sfx/files/
+.claude/skills/릴스편집/sfx/templates/
+.claude/skills/릴스편집/sfx/palette_*.json
+.claude/skills/릴스편집/sfx/sfx-catalog.md
+.claude/settings.local.json
+
+# 작업 찌꺼기
+_보관/
+_temp/
+update.sh.new
+node_modules/
+__pycache__/
+*.pyc
+.DS_Store
+.env

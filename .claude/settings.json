@@ -1,0 +1,36 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(bash .claude/skills/*)",
+      "Bash(python3:*)",
+      "Bash(python:*)",
+      "Bash(npm:*)",
+      "Bash(npx:*)",
+      "Bash(node:*)",
+      "Bash(capcut:*)",
+      "Bash(ffmpeg:*)",
+      "Bash(ffprobe:*)",
+      "Bash(brew:*)",
+      "Bash(winget:*)",
+      "Bash(uv:*)",
+      "Bash(yt-dlp:*)",
+      "Bash(xcode-select:*)",
+      "Bash(swiftc:*)",
+      "Bash(open:*)",
+      "Bash(start:*)",
+      "Bash(chmod:*)",
+      "Bash(mkdir:*)",
+      "Bash(cp:*)",
+      "Bash(ls:*)",
+      "Bash(cat:*)",
+      "Bash(head:*)",
+      "Bash(tail:*)",
+      "Bash(grep:*)",
+      "Bash(find:*)",
+      "Bash(which:*)",
+      "Bash(pgrep:*)",
+      "Bash(tasklist:*)",
+      "Bash(bash update.sh)"
+    ]
+  }
+}
